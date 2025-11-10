@@ -6,7 +6,7 @@ WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Копируем папку notification_service (включая вложенную папку app)
+# Копируем папку notification_service (включая вложенную папку app)  d
 COPY ./payment_service /app/
 
 EXPOSE 80
