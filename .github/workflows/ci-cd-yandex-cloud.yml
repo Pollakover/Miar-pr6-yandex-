@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "${{ secrets.YC_KEYS }}" > key.json
           yc config set service-account-key key.json
-          yc config set folder-id ${{ secrets.YC_FOLDER_ID }}
+          yc config set folder-id "${{ secrets.YC_FOLDER_ID }}"
           yc container registry configure-docker
 
       # 🔹 Сборка образа
@@ -56,7 +56,7 @@ jobs:
         run: |
           echo "${{ secrets.YC_KEYS }}" > key.json
           yc config set service-account-key key.json
-          yc config set folder-id ${{ secrets.YC_FOLDER_ID }}
+          yc config set folder-id "${{ secrets.YC_FOLDER_ID }}"
           yc container registry configure-docker
 
       - name: Debug YC permissions
