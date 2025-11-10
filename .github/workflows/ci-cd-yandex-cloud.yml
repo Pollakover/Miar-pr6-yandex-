@@ -28,6 +28,11 @@ jobs:
           username: json_key
           password: ${{ secrets.YC_KEYS }}
 
+      - name: Verify login
+        run: |
+          echo "=== Login Verification ==="
+          cat ~/.docker/config.json | grep cr.yandex || echo "Not logged in to YC Registry"
+
       - name: Push image to YC Registry
         run: |
           docker push cr.yandex/${{ secrets.YC_REGISTRY_ID }}/payment_service:latest
