@@ -1,4 +1,4 @@
-# .GitHub/workflows/ci-cd-yandex-cloud.yml
+#  .github/workflows/ci-cd-yandex-cloud.yml
 name: CI/CD to Yandex Cloud
 
 on:
