@@ -5,7 +5,7 @@ services:
     ports:
       - "8001:80"
     # For demo we use in-memory repo; in production replace with a database and env vars.
-  notification_service:
-    build: ./notification_service
-    ports:
-      - "8002:80"
+  #notification_service:
+    #build: ./notification_service
+    #ports:
+      #- "8002:80"
